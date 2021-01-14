@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
     <link href="/public/bootstrap.min.css" rel="stylesheet" />
+    <link href="../public/estilos.css" rel="stylesheet" />
 </head>
 <body>
     <!--Menu-->

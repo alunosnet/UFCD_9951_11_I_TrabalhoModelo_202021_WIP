@@ -68,10 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Alunos\adicionar.aspx" />
+    <Content Include="Alunos\gerir.aspx" />
     <Content Include="index.aspx" />
     <Content Include="logbook.txt" />
     <Content Include="public\bootstrap.bundle.min.js" />
     <Content Include="public\bootstrap.min.css" />
+    <Content Include="public\estilos.css" />
     <Content Include="public\jquery-3.5.1.slim.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -82,6 +84,13 @@
     </Compile>
     <Compile Include="Alunos\adicionar.aspx.designer.cs">
       <DependentUpon>adicionar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alunos\gerir.aspx.cs">
+      <DependentUpon>gerir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alunos\gerir.aspx.designer.cs">
+      <DependentUpon>gerir.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
