@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Alunos\adicionar.aspx" />
     <Content Include="Alunos\gerir.aspx" />
+    <Content Include="Alunos\Pesquisar.aspx" />
     <Content Include="App_Data\bd_9951.mdf" />
     <Content Include="App_Data\bd_9951_log.ldf">
       <DependentUpon>bd_9951.mdf</DependentUpon>
@@ -95,6 +96,13 @@
     </Compile>
     <Compile Include="Alunos\gerir.aspx.designer.cs">
       <DependentUpon>gerir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alunos\Pesquisar.aspx.cs">
+      <DependentUpon>Pesquisar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alunos\Pesquisar.aspx.designer.cs">
+      <DependentUpon>Pesquisar.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

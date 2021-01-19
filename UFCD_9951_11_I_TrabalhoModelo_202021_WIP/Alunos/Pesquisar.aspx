@@ -1,12 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="gerir.aspx.cs" Inherits="UFCD_9951_11_I_TrabalhoModelo_202021_WIP.Alunos.gerir" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Pesquisar.aspx.cs" Inherits="UFCD_9951_11_I_TrabalhoModelo_202021_WIP.Alunos.Pesquisar" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="../public/bootstrap.min.css" rel="stylesheet" />
-    <link href="../public/estilos.css" rel="stylesheet" />
+    <link href="/public/bootstrap.min.css" rel="stylesheet" />
+    <link href="/public/estilos.css" rel="stylesheet" />
 </head>
 <body>
     <!--Menu-->
@@ -65,42 +65,17 @@
     <!--Menu-->
     <form id="form1" runat="server">
         <div class="container">
-            <asp:GridView OnRowDataBound="GridView1_RowDataBound" CssClass="table" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="nprocesso" DataSourceID="SqlAlunos" AllowPaging="True" AllowSorting="True">
-                <Columns>
-                    <asp:CommandField ShowEditButton="True" ShowDeleteButton="True"></asp:CommandField>
-                    <asp:BoundField DataField="nprocesso" HeaderText="nprocesso" ReadOnly="True" InsertVisible="False" SortExpression="nprocesso"></asp:BoundField>
-                    <asp:BoundField DataField="nome" HeaderText="nome" SortExpression="nome"></asp:BoundField>
-                    <asp:BoundField DataField="data_nascimento" HeaderText="data_nascimento" SortExpression="data_nascimento"></asp:BoundField>
-                    <asp:BoundField DataField="genero" HeaderText="genero" SortExpression="genero"></asp:BoundField>
-                    <asp:BoundField DataField="morada" HeaderText="morada" SortExpression="morada"></asp:BoundField>
-                    <asp:BoundField DataField="cp" HeaderText="cp" SortExpression="cp"></asp:BoundField>
-                    <asp:BoundField DataField="localidade" HeaderText="localidade" SortExpression="localidade"></asp:BoundField>
-                    <asp:BoundField DataField="email" HeaderText="email" SortExpression="email"></asp:BoundField>
-                    <asp:TemplateField HeaderText="Fotografia">
-                        <ItemTemplate>
-                            <asp:Image ID="fotografia" runat="server" Width="200px" />
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                </Columns>
-            </asp:GridView>
-            <asp:SqlDataSource runat="server" ID="SqlAlunos" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' DeleteCommand="DELETE FROM alunos WHERE (nprocesso = @nprocesso)" SelectCommand="SELECT * FROM [alunos]" UpdateCommand="UPDATE alunos SET nome = @nome, data_nascimento = @data_nascimento, genero = @genero, morada = @morada, cp = @cp, localidade = @localidade, email = @email WHERE (nprocesso = @nprocesso)">
-                <DeleteParameters>
-                    <asp:Parameter Name="nprocesso"></asp:Parameter>
-                </DeleteParameters>
-                <UpdateParameters>
-                    <asp:Parameter Name="nome"></asp:Parameter>
-                    <asp:Parameter Name="data_nascimento" DbType="Date"></asp:Parameter>
-                    <asp:Parameter Name="genero"></asp:Parameter>
-                    <asp:Parameter Name="morada"></asp:Parameter>
-                    <asp:Parameter Name="cp"></asp:Parameter>
-                    <asp:Parameter Name="localidade"></asp:Parameter>
-                    <asp:Parameter Name="email"></asp:Parameter>
-                    <asp:Parameter Name="nprocesso"></asp:Parameter>
-                </UpdateParameters>
+            <h1>Pesquisar aluno</h1>
+            Nome:<asp:TextBox CssClass="form-control" ID="TextBox1" runat="server"></asp:TextBox><asp:Button CssClass="btn btn-info" ID="Button1" runat="server" Text="Pesquisar" />
+            <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlAlunos"></asp:ListView>
+            <asp:SqlDataSource runat="server" ID="SqlAlunos" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT * FROM [alunos] WHERE ([nome] LIKE '%' + @nome + '%')">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="TextBox1" PropertyName="Text" Name="nome" Type="String"></asp:ControlParameter>
+                </SelectParameters>
             </asp:SqlDataSource>
         </div>
     </form>
-    <script src="../public/jquery-3.5.1.slim.min.js"></script>
-    <script src="../public/bootstrap.bundle.min.js"></script>
+      <script src="/public/jquery-3.5.1.slim.min.js"></script>
+    <script src="/public/bootstrap.bundle.min.js"></script>
 </body>
 </html>
