@@ -21,7 +21,7 @@ namespace UFCD_9951_11_I_TrabalhoModelo_202021_WIP.Alunos
             if (fotografia.HasFile)
                 e.Values["fotografia"] = fotografia.FileBytes;
             else //TODO: bug isto dá erro!!!!
-                e.Values["fotografia"] = DBNull.Value;
+                e.Values["fotografia"] = fotografia.FileBytes;
         }
     }
 }
