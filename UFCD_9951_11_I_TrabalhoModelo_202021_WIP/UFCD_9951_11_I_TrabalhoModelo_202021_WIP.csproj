@@ -69,6 +69,10 @@
   <ItemGroup>
     <Content Include="Alunos\adicionar.aspx" />
     <Content Include="Alunos\gerir.aspx" />
+    <Content Include="App_Data\bd_9951.mdf" />
+    <Content Include="App_Data\bd_9951_log.ldf">
+      <DependentUpon>bd_9951.mdf</DependentUpon>
+    </Content>
     <Content Include="index.aspx" />
     <Content Include="logbook.txt" />
     <Content Include="public\bootstrap.bundle.min.js" />
@@ -111,7 +115,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Consultas\" />
     <Folder Include="Disciplinas\" />
     <Folder Include="Notas\" />
