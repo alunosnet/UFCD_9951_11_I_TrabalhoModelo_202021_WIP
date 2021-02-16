@@ -225,7 +225,7 @@
             </asp:SqlDataSource>
         </div>
     </form>
-      <script src="/public/jquery-3.5.1.slim.min.js"></script>
+    <script src="/public/jquery-3.5.1.slim.min.js"></script>
     <script src="/public/bootstrap.bundle.min.js"></script>
 </body>
 </html>

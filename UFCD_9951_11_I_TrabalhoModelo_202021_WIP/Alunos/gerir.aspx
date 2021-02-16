@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="../public/bootstrap.min.css" rel="stylesheet" />
-    <link href="../public/estilos.css" rel="stylesheet" />
+    <link href="/public/bootstrap.min.css" rel="stylesheet" />
+    <link href="/public/estilos.css" rel="stylesheet" />
 </head>
 <body>
     <!--Menu-->
@@ -100,7 +100,7 @@
             </asp:SqlDataSource>
         </div>
     </form>
-    <script src="../public/jquery-3.5.1.slim.min.js"></script>
-    <script src="../public/bootstrap.bundle.min.js"></script>
+    <script src="/public/jquery-3.5.1.slim.min.js"></script>
+    <script src="/public/bootstrap.bundle.min.js"></script>
 </body>
 </html>
