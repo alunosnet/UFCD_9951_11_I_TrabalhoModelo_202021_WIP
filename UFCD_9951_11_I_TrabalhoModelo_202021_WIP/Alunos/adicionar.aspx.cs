@@ -20,8 +20,7 @@ namespace UFCD_9951_11_I_TrabalhoModelo_202021_WIP.Alunos
             FileUpload fotografia = FormView1.FindControl("FileUpload1") as FileUpload;
             if (fotografia.HasFile)
                 e.Values["fotografia"] = fotografia.FileBytes;
-          //  else //TODO: bug isto dá erro!!!!
-            //    e.Values["fotografia"] = fotografia.FileBytes;
+
         }
     }
 }
